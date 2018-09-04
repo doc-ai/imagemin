@@ -36,9 +36,9 @@ const handleFile = (input, output, opts) => fsP.readFile(input).then(data => {
 				.then(() => fsP.writeFile(ret.path, ret.data))
 				.then(() => ret);
 		})
-		.catch(err => {
-			err.message = `Error in file: ${input}\n\n${err.message}`;
-			throw err;
+		.catch(error => {
+			error.message = `Error in file: ${input}\n\n${error.message}`;
+			throw error;
 		});
 });
 
