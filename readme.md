@@ -59,6 +59,12 @@ Type: `Array`
 
 [Plugins](https://www.npmjs.com/browse/keyword/imageminplugin) to use.
 
+#### keepOptimized
+
+Type: `Boolean`
+
+Always keep the optimized version, even if it's larger than original file.
+
 ### imagemin.buffer(buffer, [options])
 
 Returns `Promise<Buffer>`.

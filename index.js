@@ -21,7 +21,9 @@ const handleFile = (input, output, opts) => fsP.readFile(input).then(data => {
 
 	return pipe
 		.then(buf => {
-			buf = buf.length < data.length ? buf : data;
+			if (!opts.keepOptimized) {
+				buf = buf.length < data.length ? buf : data;
+			}
 
 			const ret = {
 				data: buf,
